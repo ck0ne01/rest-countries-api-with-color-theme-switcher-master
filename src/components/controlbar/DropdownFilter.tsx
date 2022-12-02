@@ -4,11 +4,10 @@ import { useState } from 'react';
 import { fetchAllCountries } from '../../lib/queries';
 import { useQuery } from '@tanstack/react-query';
 
-function DropdownFilter() {
+function DropdownFilter({ setRegionFilter }: { setRegionFilter: any }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const btnOnClickHandler = () => {
-    console.log('clicked');
     setIsOpen((prevState) => !prevState);
   };
 
@@ -28,9 +27,15 @@ function DropdownFilter() {
           data.map((country) => [country.region, country.region])
         ).values(),
       ].map((region) => (
-        <a key={region} href="#">
-          {region}
-        </a>
+        <button
+          key={region}
+          onClick={() => {
+            setIsOpen((prevState) => !prevState);
+            return setRegionFilter(region);
+          }}
+        >
+          <p>{region}</p>
+        </button>
       ))}
     </span>
   ) : null;

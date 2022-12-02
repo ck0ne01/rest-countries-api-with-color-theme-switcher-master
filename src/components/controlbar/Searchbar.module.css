@@ -10,11 +10,18 @@
   box-shadow: 0px 5px 10px -10px var(--dark-gray);
 }
 
-.searchbar>img {
+.searchbar button {
+  background-color: var(--white);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.searchbar img {
   height: 20px;
 }
 
-.searchbar>input {
+.searchbar input {
   border-style: none;
   font-size: 16px;
   color: var(--dark-gray);
@@ -22,10 +29,10 @@
   width: 460px;
 }
 
-.searchbar>input:focus {
+.searchbar input:focus {
   outline: none;
 }
 
-.searchbar>img path {
+.searchbar img path {
   fill: var(--dark-gray)
 }
