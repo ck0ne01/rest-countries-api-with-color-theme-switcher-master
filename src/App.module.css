@@ -1,5 +1,18 @@
 .content {
-  background-color: var(--bg-very-light-gray);
-  width: 100vw;
-  height: 100vh;
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+  padding-top: 80px;
+}
+
+.control-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.contries-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 90px;
+  column-gap: 90px;
 }

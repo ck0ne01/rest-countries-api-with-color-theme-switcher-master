@@ -9,8 +9,13 @@
   --semi-bold: 600;
   --extra-bold: 800;
 }
-* {
+html {
   margin: 0 0 0 0;
   font-family: Nunito Sans, Arial, Helvetica, sans-serif;
   color: var();
+}
+
+body {
+  padding: 0 85px 0 85px;
+  background-color: var(--bg-very-light-gray);
 }
