@@ -1,19 +1,19 @@
 import { useQuery } from '@tanstack/react-query';
 
-import Header from '../components/Header';
-import DropdownFilter from '../components/controlbar/DropdownFilter';
-import Searchbar from '../components/controlbar/Searchbar';
-import CountryCard from '../components/main/CountryCard';
+import Header from './components/Header';
+import DropdownFilter from './components/controlbar/DropdownFilter';
+import Searchbar from './components/controlbar/Searchbar';
+import CountryCard from './components/main/CountryCard';
 
-import styles from './Root.module.css';
+import styles from './App.module.css';
 import {
   fetchAllCountries,
   fetchCountriesByName,
   fetchCountriesByRegion,
-} from '../lib/queries';
+} from './lib/queries';
 import { useState } from 'react';
 
-function Root() {
+function App() {
   const [regionFilter, setRegionFilter] = useState('');
   const [searchFilter, setSearchFilter] = useState('');
 
@@ -58,4 +58,4 @@ function Root() {
   );
 }
 
-export default Root;
+export default App;
