@@ -1,9 +1,10 @@
-import { Country } from '../../types/country';
+import { Dispatch, SetStateAction } from 'react';
+import { Country } from '../../../types/country';
 import styles from './CountryCard.module.css';
 
-function CountryCard({ country }: { country: Country }) {
+function CountryCard({ country, onClick }: { country: Country }) {
   return (
-    <div className={styles.cardContainer} key={country.cioc}>
+    <div className={styles.cardContainer} key={country.cioc} onClick={onClick}>
       <img src={country.flags.svg} alt="german-flag" />
       <div className={styles.cardInfo} key={country.cioc}>
         <h2>{country.name.common}</h2>

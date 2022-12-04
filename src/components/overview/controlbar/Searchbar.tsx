@@ -1,5 +1,5 @@
 import styles from './Searchbar.module.css';
-import search from '../../assets/icons/search.svg';
+import search from '../../../assets/icons/search.svg';
 import { FormEvent } from 'react';
 
 function Searchbar({ setSearchFilter }) {

@@ -1,7 +1,7 @@
 import styles from './DropdownFilter.module.css';
-import ctrl from '../../assets/icons/ctrl.svg';
+import ctrl from '../../../assets/icons/ctrl.svg';
 import { useState } from 'react';
-import { fetchAllCountries } from '../../lib/queries';
+import { fetchAllCountries } from '../../../lib/queries';
 import { useQuery } from '@tanstack/react-query';
 
 function DropdownFilter({ setRegionFilter }: { setRegionFilter: any }) {
