@@ -5,6 +5,7 @@
   background-color: var(--white);
   overflow: hidden;
   box-shadow: 5px 5px 10px -10px var(--dark-gray);
+  cursor: pointer;
 }
 
 .card-container img {

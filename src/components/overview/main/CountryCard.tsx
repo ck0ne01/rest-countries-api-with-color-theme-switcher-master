@@ -1,8 +1,13 @@
-import { Dispatch, SetStateAction } from 'react';
 import { Country } from '../../../types/country';
 import styles from './CountryCard.module.css';
 
-function CountryCard({ country, onClick }: { country: Country }) {
+function CountryCard({
+  country,
+  onClick,
+}: {
+  country: Country;
+  onClick: () => void;
+}) {
   return (
     <div className={styles.cardContainer} key={country.cioc} onClick={onClick}>
       <img src={country.flags.svg} alt="german-flag" />

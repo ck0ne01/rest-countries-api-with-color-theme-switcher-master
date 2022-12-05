@@ -4,16 +4,22 @@ import { Country } from '../types/country';
 export const fetchAllCountries = (): Promise<Country[]> =>
   axios.get('https://restcountries.com/v3.1/all').then((res) => res.data);
 
-export const fetchCountriesByRegion = ({ queryKey }): Promise<Country[]> => {
+export const fetchCountriesByRegion = async ({
+  queryKey,
+}): Promise<Country[]> => {
   const [_key, { regionFilter }] = queryKey;
-  return axios
-    .get(`https://restcountries.com/v3.1/region/${regionFilter}`)
-    .then((res) => res.data);
+  const res = await axios.get(
+    `https://restcountries.com/v3.1/region/${regionFilter}`
+  );
+  return res.data;
 };
 
-export const fetchCountriesByName = ({ queryKey }): Promise<Country[]> => {
+export const fetchCountriesByName = async ({
+  queryKey,
+}): Promise<Country[]> => {
   const [_key, { searchFilter }] = queryKey;
-  return axios
-    .get(`https://restcountries.com/v3.1/name/${searchFilter}?fullText=true`)
-    .then((res) => res.data);
+  const res = await axios.get(
+    `https://restcountries.com/v3.1/name/${searchFilter}?fullText=true`
+  );
+  return res.data;
 };

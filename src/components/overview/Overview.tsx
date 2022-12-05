@@ -10,7 +10,7 @@ import Searchbar from './controlbar/Searchbar';
 import CountryCard from './main/CountryCard';
 import styles from './Overview.module.css';
 
-function Overview({ setShowDetail }) {
+function Overview({ setShowDetail }: { setShowDetail: () => void }) {
   const [regionFilter, setRegionFilter] = useState('');
   const [searchFilter, setSearchFilter] = useState('');
 
